@@ -1,11 +1,10 @@
 console.log("index.js file works at index page");
 
-import axios from "axios";
 import lazyLoad from "vanilla-lazyload";
 
-// var newsLazyLoad = new lazyLoad({
-//   container: document.getElementsByClassName("newsSection")
-// });
+let LazyLoad = new lazyLoad({
+  elements_selector: ".lazy"
+});
 
 /* global AOS */
 AOS.init({
@@ -92,14 +91,14 @@ function onScroll(event) {
 //   .addClass("active");
 
 const getAllNews = () => {
-  axios
-    .get(
-      "https://newseditor.gamepoch.com/thinkcmf/data_news.php?post_net=gamepoch.com"
-    )
+  fetch(
+    "https://newseditor.gamepoch.com/thinkcmf/data_news.php?post_net=gamepoch.com"
+  )
+    .then(response => response.json())
     .then(
-      response => {
+      data => {
         // 新闻详细数据列表
-        newsArray = response.data;
+        newsArray = data;
         // console.log(response.data);
         // console.log(newsArray);
         // console.log(document.getElementsByClassName("container"));
@@ -122,7 +121,7 @@ const insertNewsCover = newsArray => {
       htmlString +=
         '  \n\t\t\t    <div class="col-xs-12 newsSection" data-aos="zoom-in">\n\t\t\t        <div class="col-md-8 col-sm-12 " style="margin-bottom: 5rem;">\n\t\t\t            <a href="news.html?id=' +
         news.id +
-        '">\n\t\t\t            <h2 style="margin-top: 2%; font-size:2rem; font-weight: bold">' +
+        '">\n\t\t\t            <h2 style="margin-top: 2%; font-size:2rem; font-weight: normal">' +
         news.post_title +
         '</h2>\n\t\t\t            </a>\n\t\t\t            <p style="margin-top: 5%; font-size:1rem; color: white">' +
         news.post_excerpt +
@@ -130,11 +129,16 @@ const insertNewsCover = newsArray => {
         news.post_source +
         " " +
         news.post_modified +
-        '</p>\n\t\t\t            \n\t\t\t        </div>\n\t\t\t        <div class="col-md-4 col-sm-12">\n\t\t\t            <img class="img-responsive lazy" alt="新闻图片" src="https://newseditor.gamepoch.com/thinkcmf/data/upload/' +
+        '</p>\n\t\t\t            \n\t\t\t        </div>\n\t\t\t        <div class="col-md-4 col-sm-12">\n\t\t\t            <img class="img-responsive lazy" alt="新闻图片" data-src="https://newseditor.gamepoch.com/thinkcmf/data/upload/' +
         JSON.parse(news.smeta).thumb +
         '">\n\t\t\t        </div>\n\t\t\t        </div>\n\t\t\t    ';
     }
   });
 
   $("#news-container").html(htmlString);
+  var newsImageLazyLoad = new lazyLoad({ elements_selector: ".lazy" });
+  newsImageLazyLoad.update();
+  // var newsLazyLoad = new lazyLoad({
+  //   container: document.getElementsByClassName("newsSection")
+  // });
 };
