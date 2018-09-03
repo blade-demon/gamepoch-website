@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is official gamepoch english website.">
+  <meta name="author" content="gamepoch">
+  <title>Gamepoch星游纪</title>
+  <!-- Favicon Icon -->
+  <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar navbar-default  menu-top" style="background-color:black;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="home.html"><img src="images/logo.png" alt="logo" id="gamepoch"></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="page-scroll active" href="home.html">Home</a></li>
+            <li><a class="page-scroll" href="home.html#games">Games</a></li>
+            <li><a class="page-scroll" href="home.html#news">News</a></li>
+            <li><a class="page-scroll" href="home.html#about">about</a></li>
+            <li><a class="page-scroll" href="home.html#events">Chronicle of Events</a></li>
+            <li><a class="page-scroll" href="home.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+
+    <ol class="carousel-indicators">
+    </ol>
+
+  </div>
+  <div id="news-container" class="container">
+    <!--<div class="row">-->
+    <!--    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:100px;">-->
+    <!--        <p style="font-size:25px;"> <b>Volume</b></p>-->
+    <!--        <p>Locksley doesn't kill. That would be far too easy. Instead, he commits his crimes through stealth. Sneaking, distracting, avoiding. He is never seen, and seldom heard. As he grows in popularity and notoriety, so will his inventory. An-->
+    <!--            arsenal of gadgets await discovery in a quest to rob from the rich and give to the unheard.</p>-->
+    <!--        <p>A hundred challenging and exciting levels lie ahead, but that is only the beginning of the Volume. The community are free to build their own challenges, even releasing their own takes on the core levels. Volume will evolve, warp and grow-->
+    <!--            as players make their mark on Locksley's legend.</p>-->
+    <!--        <p>Volume is a near-future retelling of the Robin Hood legend, starring Danny Wallace (Thomas Was Alone), Charlie McDonnell and award-winning, critically-acclaimed actor Andy Serkis (The Lord of the Rings, Planet of the Apes) as Gisborne.</p>-->
+    <!--        <p style="font-size:25px;"><b>Steam Evaluate</b></p>-->
+    <!--        <p>This is a small, independent games, continuously playing along with the DLC 4 hours to clear customs there. It has historical significance in science and education of the game is mainly about a real-life in the special environment of an-->
+    <!--            ancient race, is how to survive in the harsh to its complex nature of a story contains the author Chong feelings of love, fear of this ancient race. Also conveys an idea, regardless of how much is in the tough environment, as long-->
+    <!--            as there is a loving reverence for nature as well as a positive and optimistic hope for the future of the heart, we will be able to find their own piece of heaven and Earth.</p>-->
+    <!--       <img src="images/yl.jpg" style="width:100%" data-src="" alt="Third slide">-->
+    <!--    </div>-->
+    <!--</div>-->
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <div class="text-center">© 2017 Gamepoch, Inc. All rights reserved</div>
+          <div class="text-center">沪ICP证：沪B2-20160111</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer Bottom -->
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Portfolio Filters -->
+  <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/axios/0.16.2/axios.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script>
+    $("ul:eq(0) a").removeClass("active");
+    $("ul").find("li").eq(1).find("a").addClass("active");
+    $(document).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $("#gamepoch").attr("src", "/images/logo2.png");
+        $('.menu-top').addClass('menu-shrink');
+      }
+      else {
+        $("#gamepoch").attr("src", "/images/logo.png");
+        $('.menu-top').removeClass('menu-shrink');
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/lib/jquery-deparam.min.js"></script>
+  <script type="text/javascript" src="js/news.js"></script>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function (b, o, i, l, e, r) {
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] =
+        function () {
+          (b[l].q = b[l].q || []).push(arguments)
+        });
+      b[l].l = +new Date;
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = 'https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-82639755-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>
