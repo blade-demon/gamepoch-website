@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="This is Gamepoch official website.">
   <meta name="author" content="gamepoch">
+  <meta name="theme-color" content="#317EFB" />
   <title>Gamepoch星游纪</title>
   <!-- Favicon Icon -->
   <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon.png">
@@ -167,19 +168,19 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid" data-aos="zoom-in">
-      <ul class="game-filters clearfix">
+    <div class="container" data-aos="zoom-in">
+      <ul class="game-filters clearfix" data-ref="controls">
         <li>
-          <span class="active" data-filter=".hot">HOT</span>
+          <span type="button" class="filter active" data-filter="hot" data-ref="filter">HOT</span>
         </li>
         <li>
-          <span data-filter=".new">NEW</span>
+          <span type="button" class="filter" data-filter="new" data-ref="filter">NEW</span>
         </li>
         <li>
-          <span data-filter="all">ALL</span>
+          <span type="button" class="filter" data-filter="all" data-ref="filter">ALL</span>
         </li>
       </ul>
-      <div class="game-list-container">
+      <div class="game-list-container" data-ref="container">
         <!-- Game list container through js script. -->
       </div>
     </div>

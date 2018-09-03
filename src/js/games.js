@@ -1,4 +1,8 @@
 import mixitup from "mixitup";
+import lazyLoad from "vanilla-lazyload";
+var newsImageLazyLoad = new lazyLoad({
+  elements_selector: ".lazy"
+});
 
 console.log("load games");
 const gamesList = [
@@ -164,14 +168,14 @@ const renderGameItem = item => {
   return `
    <div class="portfolio ${classes}" data-ref="game">
     <div class="portfolio-wrapper">
-      <a href=${item.href} target="_blank" rel="noopener">
-        <img class="lazy" data-src=${item.coverImg} alt=${item.name} />
+      <a href="${item.href}" target="_blank" rel="noopener">
+        <img class="lazy" data-src="${item.coverImg}" alt="${item.name}" />
       </a>
       <div class="label">
         <div class="label-text">
-          <a href=${
+          <a href="${
             item.href
-          } target="_blank" class="text-title" rel="noopener">${item.name}</a>
+          }" target="_blank" class="text-title" rel="noopener">${item.name}</a>
           <span class="text-category">${item.category}</span>
         </div>
         <div class="label-bg"></div>
@@ -180,7 +184,12 @@ const renderGameItem = item => {
   </div>
   `;
 };
-var mixer = mixitup(".game-list-container", {
+
+var containerEl = document.querySelector('[data-ref="container"]');
+var controls = document.querySelector('[data-ref="controls"]');
+var filters = document.querySelectorAll('[data-ref="filter"]');
+
+var mixer = mixitup(containerEl, {
   data: {
     uidKey: "id",
     dirtyCheck: true
@@ -188,14 +197,57 @@ var mixer = mixitup(".game-list-container", {
   render: {
     target: renderGameItem
   },
-  controls: {
-    toggleDefault: "hot"
+  layout: {
+    containerClassName: "game-list-container"
   },
   selectors: {
     target: '[data-ref="game"]'
   }
 });
 
-mixer.dataset(gamesList).then(function(state) {
-  console.log(state);
+// Finally, load the full dataset into the mixer
+mixer
+  .dataset(gamesList.filter(item => item.type.indexOf("hot") !== -1))
+  .then(function(state) {
+    console.log("loaded " + state.activeDataset.length + " items");
+  });
+
+// We can now set up a handler to listen for "click" events on our UI buttons
+controls.addEventListener("click", function(e) {
+  handleButtonClick(e.target);
 });
+
+function activateButton(activeButton, siblings) {
+  var button;
+  var i;
+  for (i = 0; i < siblings.length; i++) {
+    button = siblings[i];
+    button.classList[button === activeButton ? "add" : "remove"]("active");
+  }
+}
+
+function handleButtonClick(button) {
+  // If button is already active, or an operation is in progress, ignore the click
+  if (button.classList.contains("active") || mixer.isMixing()) return;
+  // Else, check what type of button it is, if any
+  if (button.matches('[data-ref="filter"]')) {
+    // Filter button
+    activateButton(button, filters);
+  } else {
+    // Not a button
+    return;
+  }
+
+  const className = button.getAttribute("data-filter");
+  return mixer
+    .dataset(
+      className === "all"
+        ? gamesList
+        : gamesList.filter(item => item.type.indexOf(className) !== -1)
+    )
+    .then(function(state) {
+      newsImageLazyLoad.update();
+      console.log("fetched " + state.activeDataset.length + " items");
+    })
+    .catch(console.error.bind(console));
+}

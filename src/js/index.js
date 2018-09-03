@@ -2,10 +2,6 @@ console.log("index.js file works at index page");
 
 import lazyLoad from "vanilla-lazyload";
 
-let LazyLoad = new lazyLoad({
-  elements_selector: ".lazy"
-});
-
 /* global AOS */
 AOS.init({
   offset: 200,
@@ -138,7 +134,4 @@ const insertNewsCover = newsArray => {
   $("#news-container").html(htmlString);
   var newsImageLazyLoad = new lazyLoad({ elements_selector: ".lazy" });
   newsImageLazyLoad.update();
-  // var newsLazyLoad = new lazyLoad({
-  //   container: document.getElementsByClassName("newsSection")
-  // });
 };
