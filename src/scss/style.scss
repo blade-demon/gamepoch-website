@@ -969,7 +969,7 @@ h6 {
 /* Contact Us */
 
 .contact-us {
-  background: #fff none repeat scroll 0 0;
+  // background: #fff none repeat scroll 0 0;
 }
 
 .contact-left {
@@ -981,6 +981,24 @@ h6 {
   color: #262e3b;
 }
 
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-list li i {
   font-size: 18px;
   left: 0;
@@ -988,7 +1006,7 @@ h6 {
   position: absolute;
   text-align: center;
   width: 15px;
-  color: #5f121a;
+  color: black;
 }
 
 .contact-list li {

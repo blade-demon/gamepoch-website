@@ -8,6 +8,7 @@ var buffer = require("vinyl-buffer");
 var source = require("vinyl-source-stream");
 var browserSync = require("browser-sync").create();
 var minimist = require("minimist");
+var es = require("event-stream");
 
 var envOptions = {
   string: "env",
@@ -110,37 +111,42 @@ gulp.task("copyFavicon", function() {
 
 // Tansfer js files from ES6 to ES5 with Babel
 gulp.task("babel", function() {
-  return gulp
-    .src("src/js/**/*.js")
-    .pipe($.sourcemaps.init())
-    .pipe(
-      $.babel({
-        presets: ["env"],
-        plugins: ["transform-runtime"]
-      })
-    )
-    .pipe($.concat("bundle.js"))
-    .pipe($.sourcemaps.write("."))
-    .pipe(gulp.dest("build/js"));
+  return (
+    gulp
+      .src("src/js/**/*.js")
+      .pipe($.sourcemaps.init())
+      .pipe(
+        $.babel({
+          presets: ["env"],
+          plugins: ["transform-runtime"]
+        })
+      )
+      // .pipe($.concat("bundle.js"))
+      .pipe($.sourcemaps.write("."))
+      .pipe(gulp.dest("build/js"))
+  );
 });
 
 // Browserify makes posible require("modules") in the browser
 gulp.task("browserify", ["babel"], function() {
-  var b = browserify({
-    entries: "build/js/bundle.js",
-    debug: true
+  var entryFiles = [
+    "build/js/index.js",
+    "build/js/games.js",
+    "build/js/news.js"
+  ];
+
+  var tasks = entryFiles.map(function(entry) {
+    return browserify({ entries: entry, debug: true })
+      .bundle()
+      .pipe(source("index.js"))
+      .pipe(buffer())
+      .pipe($.sourcemaps.init({ loadMaps: true }))
+      .pipe($.sourcemaps.write("."))
+      .pipe(gulp.dest("build/js"));
   });
-  return b
-    .bundle()
-    .pipe(source("bundle.js"))
-    .pipe(buffer())
-    .pipe(
-      $.sourcemaps.init({
-        loadMaps: true
-      })
-    )
-    .pipe($.sourcemaps.write("."))
-    .pipe(gulp.dest("build/js"));
+
+  //创建一个合并流
+  return es.merge.apply(null, tasks);
 });
 
 gulp.task("eslint", function() {
@@ -155,7 +161,7 @@ gulp.task("eslint", function() {
 gulp.task("compressJS", ["browserify"], function(cb) {
   pump(
     [
-      gulp.src("build/js/bundle.js"),
+      gulp.src(["build/js/index.js", "build/js/games.js", "build/js/news.js"]),
       $.uglify({
         compress: {
           drop_console: false

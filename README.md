@@ -48,5 +48,3 @@ Webapp 开发脚手架，使用 gulp，babel, browserify 搭建的前端开发�
     - 压缩
 
 ###
-
-docker run --name gamepoch-website -v /Users/xuziwei/Desktop/webapp-scafford/build:/usr/share/nginx/html:ro -d -p 8080:80 nginx
