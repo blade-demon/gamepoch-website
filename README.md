@@ -48,3 +48,6 @@ Webapp 开发脚手架，使用 gulp，babel, browserify 搭建的前端开发�
     - 压缩
 
 ###
+
+#部署
+scp -r build/\* root@139.196.239.213:/root/gamepoch-website-en-test
