@@ -322,10 +322,11 @@ $(function() {
   var params = getJsonFromUrl();
   var gameId = params.id;
   console.log(gameId);
+
   if (gameId !== undefined) {
     const gameInfo = gamesList.filter(game => String(game.id) === gameId);
     console.log(gameInfo);
-
+    document.title = gameInfo[0].name;
     $coverImg.attr("src", gameInfo[0].headerImg);
     $titleName.text(gameInfo[0].name);
 

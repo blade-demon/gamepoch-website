@@ -20,7 +20,17 @@ var options = minimist(process.argv.slice(2), envOptions);
 
 // Copy html files into build folder
 gulp.task("copyHTML", function() {
-  return gulp.src("src/**/*.html").pipe(gulp.dest("build"));
+  return gulp
+    .src("src/**/*.html")
+    .pipe(
+      $.if(
+        options.env === "production",
+        $.htmlmin({
+          collapseWhitespace: true
+        })
+      )
+    )
+    .pipe(gulp.dest("build"));
 });
 
 // Clean .tmp and build folder

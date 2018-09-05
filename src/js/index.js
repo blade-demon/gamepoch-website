@@ -88,24 +88,23 @@ function onScroll(event) {
 //   .addClass("active");
 
 const getAllNews = () => {
-  fetch(
+  $.get(
     "https://newseditor.gamepoch.com/thinkcmf/data_news.php?post_net=gamepoch.com"
-  )
-    .then(response => response.json())
-    .then(
-      data => {
-        // 新闻详细数据列表
-        newsArray = data;
-        // console.log(response.data);
-        // console.log(newsArray);
-        // console.log(document.getElementsByClassName("container"));
-        // 创建新闻
-        insertNewsCover(newsArray);
-      },
-      error => {
-        console.log(error);
-      }
-    );
+  ).then(
+    data => {
+      // console.log(data);
+      // 新闻详细数据列表
+      newsArray = data;
+      // console.log(response.data);
+      // console.log(newsArray);
+      // console.log(document.getElementsByClassName("container"));
+      // 创建新闻
+      insertNewsCover(newsArray);
+    },
+    error => {
+      console.log(error);
+    }
+  );
 };
 
 // 插入新闻元素
