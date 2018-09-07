@@ -305,7 +305,9 @@ const renderGameItem = item => {
    <div class="portfolio ${classes}" data-ref="game">
     <div class="portfolio-wrapper">
       <a href="${item.href}?id=${item.id}" target="_blank" rel="noopener">
-        <img class="lazy" data-src="${item.coverImg}" alt="${item.name}" />
+        <img class="lazy" src="img/loading.gif" data-src="${
+          item.coverImg
+        }" alt="${item.name}" />
       </a>
       <div class="label">
         <div class="label-text">
