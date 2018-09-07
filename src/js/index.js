@@ -2,6 +2,9 @@ console.log("index.js file works at index page");
 
 import mixitup from "mixitup";
 import lazyLoad from "vanilla-lazyload";
+let newsImageLazyLoad = new lazyLoad({
+  elements_selector: ".lazy"
+});
 
 /* global AOS */
 AOS.init({
@@ -15,6 +18,7 @@ var newsArray = [];
 
 $(document).ready(function() {
   $(document).on("scroll", onScroll);
+
   $('a[href^="#"]').on("click", function(e) {
     e.preventDefault();
     $(document).on("scroll");
@@ -45,8 +49,9 @@ $(document).ready(function() {
 
   // 初始化tooltip
   $('[data-toggle="tooltip"]').tooltip();
-
+  console.log("dom加载完成，开始获得新闻数据");
   getAllNews();
+  console.log("已获得新闻数据");
 });
 
 // 鼠标滚动事件
@@ -132,13 +137,8 @@ const insertNewsCover = newsArray => {
   });
 
   $("#news-container").html(htmlString);
-  var newsImageLazyLoad = new lazyLoad({ elements_selector: ".lazy" });
   newsImageLazyLoad.update();
 };
-
-var newsImageLazyLoad = new lazyLoad({
-  elements_selector: ".lazy"
-});
 
 console.log("load games");
 const gamesList = [
@@ -305,9 +305,7 @@ const renderGameItem = item => {
    <div class="portfolio ${classes}" data-ref="game">
     <div class="portfolio-wrapper">
       <a href="${item.href}?id=${item.id}" target="_blank" rel="noopener">
-        <img class="lazy" src="../img/loading.gif" data-src="${
-          item.coverImg
-        }" alt="${item.name}" />
+        <img class="lazy" data-src="${item.coverImg}" alt="${item.name}" />
       </a>
       <div class="label">
         <div class="label-text">
@@ -348,6 +346,7 @@ mixer
   .dataset(gamesList.filter(item => item.type.indexOf("hot") !== -1))
   .then(function(state) {
     console.log("loaded " + state.activeDataset.length + " items");
+    newsImageLazyLoad.update();
   });
 
 // We can now set up a handler to listen for "click" events on our UI buttons
@@ -384,8 +383,8 @@ function handleButtonClick(button) {
         : gamesList.filter(item => item.type.indexOf(className) !== -1)
     )
     .then(function(state) {
-      newsImageLazyLoad.update();
       console.log("fetched " + state.activeDataset.length + " items");
+      newsImageLazyLoad.update();
     })
     .catch(console.error.bind(console));
 }

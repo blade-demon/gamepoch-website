@@ -22,7 +22,10 @@ const getNewsById = id => {
         <h3>${news.post_title}</h3>
         <p>${news.post_modified}</p>
         <p>${news.post_source}</p>
-          ${news.post_content}
+          ${news.post_content.replace(
+            /http\:\/\/139.196.239.213/g,
+            "https://newseditor.gamepoch.com"
+          )}
       `);
     },
     error => {

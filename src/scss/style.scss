@@ -418,6 +418,36 @@ h6 {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .single-slide-item h2 {
+    font-weight: 100;
+    color: #f8f8f8;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    text-transform: uppercase;
+    line-height: 4.5rem;
+  }
+
+  .single-slide-item h2 span {
+    color: #f92740;
+    background: #fff none repeat scroll 0 0;
+    height: 1.2rem;
+    padding: 0 1rem;
+    width: 3rem;
+  }
+
+  .single-slide-item p {
+    color: #fff;
+    margin: auto auto 2rem;
+    width: 70%;
+  }
+
+  .single-slide-item .btn {
+    color: #fff;
+  }
+}
+
 /* About Us */
 
 .about_single i {
@@ -566,7 +596,7 @@ h6 {
 
 .our-events {
   background: #1d2025 none repeat fixed 0 0;
-  // background-image: url("../img/img1.jpg");
+  // background-image: url("../img/events-bg.jpg");
   background-size: cover;
 }
 

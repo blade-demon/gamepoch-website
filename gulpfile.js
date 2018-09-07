@@ -33,6 +33,11 @@ gulp.task("copyHTML", function() {
     .pipe(gulp.dest("build"));
 });
 
+// copy font
+gulp.task("copyFont", function() {
+  return gulp.src("src/fonts/*.*").pipe(gulp.dest("build/fonts"));
+});
+
 // Clean .tmp and build folder
 gulp.task("clean", function() {
   return gulp
@@ -52,6 +57,12 @@ gulp.task("bower", function() {
           },
           bootstrap: {
             main: ["dist/js/*.js", "dist/css/*.*", "dist/fonts/*.*"]
+          },
+          aos: {
+            main: ["dist/*.js", "dist/*.css"]
+          },
+          "font-awesome": {
+            main: ["css/*.min.css", "fonts/*.*"]
           }
         }
       })
@@ -93,7 +104,7 @@ gulp.task("imagemin", function() {
         $.imagemin({
           interlaced: true,
           progressive: true,
-          optimizationLevel: 5,
+          optimizationLevel: 9,
           svgoPlugins: [{ removeViewBox: true }]
         })
       )
@@ -174,7 +185,7 @@ gulp.task("compressJS", ["browserify"], function(cb) {
       gulp.src(["build/js/index.js", "build/js/games.js", "build/js/news.js"]),
       $.uglify({
         compress: {
-          drop_console: false
+          drop_console: true
         }
       }),
       gulp.dest("build/js")
@@ -222,39 +233,55 @@ gulp.task("vendorCSS", function() {
     .pipe(gulp.dest("build/css"));
 });
 
-// Start server for development
-gulp.task("serve:dev", ["vendorJS", "vendorCSS", "browserify"], function() {
-  console.log("当前环境：" + options.env);
-  browserSync.init({
-    server: {
-      baseDir: "build"
-    }
-  });
-  // Watch the files in the src folder.
-  gulp.watch("src/**/*.html", ["copyHTML"]);
-  gulp.watch("src/**/*.scss", ["sass"]);
-  // gulp.watch("src/**/*.jade", ["jade"]);
-  gulp.watch("src/**/*.js", ["eslint", "browserify"]);
-  // Reload the browser when the files changes in the build folder.
-  gulp.watch("build/**/*.css").on("change", browserSync.reload);
-  gulp.watch("build/**/*.js").on("change", browserSync.reload);
-  gulp.watch("build/**/*.html").on("change", browserSync.reload);
+gulp.task("vendorFont", function() {
+  return gulp
+    .src(".tmp/vendors/**/*.{ttf,otf,eot,svg,woff,woff2}")
+    .pipe($.flatten())
+    .pipe(gulp.dest("build/fonts"));
 });
 
+// Start server for development
+gulp.task(
+  "serve:dev",
+  ["vendorJS", "vendorCSS", "vendorFont", "browserify"],
+  function() {
+    console.log("当前环境：" + options.env);
+    browserSync.init({
+      server: {
+        baseDir: "build"
+      }
+    });
+    // Watch the files in the src folder.
+    gulp.watch("src/**/*.html", ["copyHTML"]);
+    gulp.watch("src/**/*.scss", ["sass"]);
+    gulp.watch("src/fonts/*.*", ["copyFont"]);
+    // gulp.watch("src/**/*.jade", ["jade"]);
+    gulp.watch("src/**/*.js", ["eslint", "browserify"]);
+    // Reload the browser when the files changes in the build folder.
+    gulp.watch("build/**/*.css").on("change", browserSync.reload);
+    gulp.watch("build/**/*.js").on("change", browserSync.reload);
+    gulp.watch("build/**/*.html").on("change", browserSync.reload);
+  }
+);
+
 // Start Serve for production
-gulp.task("serve:dist", ["vendorJS", "vendorCSS", "compressJS"], function() {
-  console.log("当前环境：" + options.env);
-  browserSync.init({ server: { baseDir: "build" }, index: "index.html" });
-  // Watch the files in the src folder.
-  gulp.watch("src/**/*.html", ["copyHTML"]);
-  gulp.watch("src/**/*.scss", ["sass"]);
-  // gulp.watch("src/**/*.jade", ["jade"]);
-  gulp.watch("src/**/*.js", ["eslint", "compressJS"]);
-  // Reload the browser when the files changes in the build folder.
-  gulp.watch("build/**/*.css").on("change", browserSync.reload);
-  gulp.watch("build/**/*.js").on("change", browserSync.reload);
-  gulp.watch("build/**/*.html").on("change", browserSync.reload);
-});
+gulp.task(
+  "serve:dist",
+  ["vendorJS", "vendorCSS", "vendorFont", "compressJS"],
+  function() {
+    console.log("当前环境：" + options.env);
+    browserSync.init({ server: { baseDir: "build" }, index: "index.html" });
+    // Watch the files in the src folder.
+    gulp.watch("src/**/*.html", ["copyHTML"]);
+    gulp.watch("src/**/*.scss", ["sass"]);
+    gulp.watch("src/fonts/*.*", ["copyFont"]);
+    gulp.watch("src/**/*.js", ["eslint", "compressJS"]);
+    // Reload the browser when the files changes in the build folder.
+    gulp.watch("build/**/*.css").on("change", browserSync.reload);
+    gulp.watch("build/**/*.js").on("change", browserSync.reload);
+    gulp.watch("build/**/*.html").on("change", browserSync.reload);
+  }
+);
 
 // Initial files
 gulp.task(
@@ -262,6 +289,7 @@ gulp.task(
   $.sequence(
     "clean",
     "copyHTML",
+    "copyFont",
     "sass",
     "bower",
     "eslint",
