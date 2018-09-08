@@ -19,7 +19,13 @@ var newsArray = [];
 $(document).ready(function() {
   $(document).on("scroll", onScroll);
 
+  var navMain = $(".navbar-collapse"); // avoid dependency on #id
+  navMain.on("click", "a:not([data-toggle])", null, function() {
+    navMain.collapse("hide");
+  });
+
   $('a[href^="#"]').on("click", function(e) {
+    console.log("click");
     e.preventDefault();
     $(document).on("scroll");
 
@@ -73,12 +79,14 @@ function onScroll(event) {
       currLink.removeClass("active");
     }
 
-    if (scrollPos > 100) {
+    if (scrollPos > 10) {
       $("#gamepoch-logo").attr("src", "../img/logo2.png");
       $(".menu-top").addClass("menu-shrink");
+      $(".navbar-nav").css("background", "#ecf0f1");
     } else {
       $("#gamepoch-logo").attr("src", "../img/logo.png");
       $(".menu-top").removeClass("menu-shrink");
+      $(".navbar-nav").css("background", "black");
     }
   });
 }
