@@ -203,6 +203,7 @@ h6 {
 
 #gamepoch-logo {
   width: 12rem;
+  padding: 1rem 1.5rem;
 }
 
 @media screen and (min-width: 768px) and(max-width: 992px) {
@@ -446,6 +447,24 @@ h6 {
   .single-slide-item .btn {
     color: #fff;
   }
+
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  .section-title h2 {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
+
+  .section-title p {
+    margin: auto;
+    padding: 1.5rem;
+    width: 100%;
+  }
 }
 
 /* About Us */
@@ -558,7 +577,11 @@ h6 {
 
 .events-container__item {
   width: 20%;
-  margin: 1rem;
+  margin: 0 1rem 0 0;
+}
+
+.newsSection {
+  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -569,12 +592,16 @@ h6 {
 
   .events-container__item {
     width: auto;
-    margin: 1rem;
+    margin: 0.1rem 1rem;
     // max-height: 20rem;
   }
 
   .process-item-content {
     min-height: 10rem;
+  }
+
+  .newsSection {
+    margin-bottom: 5rem;
   }
 }
 
@@ -682,7 +709,7 @@ h6 {
 .game-list-container {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -1194,9 +1221,15 @@ h6 {
 /* Responsive Media */
 
 @media screen and (max-width: 768px) {
+  .navbar-default .navbar-toggle {
+    border-color: #fff0;
+  }
+
   .navbar-toggle {
-    background: #fff none repeat scroll 0 0 !important;
+    background: #fff0 none repeat scroll 0 0 !important;
     border-radius: 2px !important;
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
   }
   .navbar-nav {
     background: #000 none repeat scroll 0 0;

@@ -120,7 +120,7 @@ const insertNewsCover = newsArray => {
     // console.log(index);
     if (index < 10) {
       htmlString +=
-        '  \n\t\t\t    <div class="col-xs-12 newsSection" data-aos="zoom-in">\n\t\t\t        <div class="col-md-8 col-sm-12 " style="margin-bottom: 5rem;">\n\t\t\t            <a href="news.html?id=' +
+        '  \n\t\t\t    <div class="col-xs-12 newsSection" data-aos="zoom-in">\n\t\t\t        <div class="col-md-8 col-sm-12">\n\t\t\t            <a href="news.html?id=' +
         news.id +
         '">\n\t\t\t            <h2 style="margin-top: 2%; font-size:2rem; font-weight: normal">' +
         news.post_title +
