@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>页面不存在</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    img.error {
+      width: 60%;
+      margin-left: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img class="error" src="img/common/500.jpeg" alt="404" srcset="">
+    <h5 id="timeWrapper"><strong id="seconds">3</strong>s后回到页面首页</h2>
+  </div>
+  <script>
+    var time = 3;
+    var node = document.getElementById("seconds");
+    var nodeWrapper = document.getElementById("timeWrapper");
+    setInterval(function () {
+      if (time > 1) {
+        node.innerText = --time;
+      } else {
+        timeWrapper.innerText = "跳转中...";
+        window.location.href = "/";
+      }
+    }, 1000);
+
+  </script>
+</body>
+
+</html>

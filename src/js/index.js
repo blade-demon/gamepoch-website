@@ -103,8 +103,8 @@ function onScroll(event) {
 const getAllNews = () => {
   $.get(
     "https://newseditor.gamepoch.com/thinkcmf/data_news.php?post_net=gamepoch.com"
-  ).then(
-    data => {
+  )
+    .then(data => {
       // console.log(data);
       // 新闻详细数据列表
       newsArray = data;
@@ -113,11 +113,10 @@ const getAllNews = () => {
       // console.log(document.getElementsByClassName("container"));
       // 创建新闻
       insertNewsCover(newsArray);
-    },
-    error => {
+    })
+    .catch(function(error) {
       console.log(error);
-    }
-  );
+    });
 };
 
 // 插入新闻元素
@@ -313,7 +312,7 @@ const renderGameItem = item => {
    <div class="portfolio ${classes}" data-ref="game">
     <div class="portfolio-wrapper">
       <a href="${item.href}?id=${item.id}" target="_blank" rel="noopener">
-        <img class="lazy" src="img/loading.gif" data-src="${
+        <img class="lazy" src="img/common/loading.gif" data-src="${
           item.coverImg
         }" alt="${item.name}" />
       </a>
