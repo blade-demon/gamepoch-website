@@ -127,19 +127,19 @@ const insertNewsCover = newsArray => {
     // console.log(index);
     if (index < 10) {
       htmlString +=
-        '  \n\t\t\t    <div class="col-xs-12 newsSection" data-aos="zoom-in">\n\t\t\t        <div class="col-md-8 col-sm-12">\n\t\t\t            <a href="news.html?id=' +
+        '<div class="col-xs-12 newsSection" data-aos="zoom-in">      <div class="col-md-8 col-sm-12">          <a href="news.html?id=' +
         news.id +
-        '">\n\t\t\t            <h2 style="margin-top: 2%; font-size:2rem; font-weight: normal">' +
+        '">          <h2 style="margin-top: 2%; font-size:2rem; font-weight: normal">' +
         news.post_title +
-        '</h2>\n\t\t\t            </a>\n\t\t\t            <p style="margin-top: 5%; font-size:1rem; color: white">' +
+        '</h2>          </a>          <p style="margin-top: 5%; font-size:1.5rem; color: white">' +
         news.post_excerpt +
-        '</p>\n\t\t\t            <p style="margin-top: 5%; color: white; font-size: 0.5rem">by ' +
+        '</p><p style="margin-top: 5%; color: white; font-size: 1.2rem">by ' +
         news.post_source +
         " " +
         news.post_modified +
-        '</p>\n\t\t\t            \n\t\t\t        </div>\n\t\t\t        <div class="col-md-4 col-sm-12">\n\t\t\t            <img class="img-responsive lazy" alt="新闻图片" data-src="https://newseditor.gamepoch.com/thinkcmf/data/upload/' +
+        '</p>                </div>      <div class="col-md-4 col-sm-12">          <img class="img-responsive lazy" alt="新闻图片" data-src="https://newseditor.gamepoch.com/thinkcmf/data/upload/' +
         JSON.parse(news.smeta).thumb +
-        '">\n\t\t\t        </div>\n\t\t\t        </div>\n\t\t\t    ';
+        '">      </div>      </div>  ';
     }
   });
 
