@@ -1,7 +1,7 @@
 {
-  "name": "webapp-scafford",
+  "name": "website-cn",
   "version": "0.0.1",
-  "description": "This is a webapp scafford for quickly development and deployment.",
+  "description": "This is a website for gamepoch cn website.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "gulp clean",

@@ -1,4 +1,4 @@
-console.log("index.js file works at index page");
+// console.log("index.js file works at index page");
 
 import mixitup from "mixitup";
 import lazyLoad from "vanilla-lazyload";
@@ -25,7 +25,7 @@ $(document).ready(function() {
   });
 
   $('a[href^="#"]').on("click", function(e) {
-    console.log("click");
+    // console.log("click");
     e.preventDefault();
     $(document).on("scroll");
 
@@ -55,9 +55,9 @@ $(document).ready(function() {
 
   // 初始化tooltip
   $('[data-toggle="tooltip"]').tooltip();
-  console.log("dom加载完成，开始获得新闻数据");
+  // console.log("dom加载完成，开始获得新闻数据");
   getAllNews();
-  console.log("已获得新闻数据");
+  // console.log("已获得新闻数据");
 });
 
 // 鼠标滚动事件
@@ -65,7 +65,11 @@ function onScroll(event) {
   var scrollPos = $(document).scrollTop();
   $("nav a").each(function() {
     var currLink = $(this);
-    if (currLink.attr("href") === "http://www.gamepoch.cn") {
+
+    if (currLink.attr("href") === "http://www.gamepoch.com") {
+      return;
+    }
+    if (currLink.attr("href") === "http://nba2k19.gamepoch.com") {
       return;
     }
     var refElement = $(currLink.attr("href"));
@@ -102,7 +106,7 @@ function onScroll(event) {
 
 const getAllNews = () => {
   $.get(
-    "https://newseditor.gamepoch.com/thinkcmf/data_news.php?post_net=gamepoch.com"
+    "https://newseditor.gamepoch.com/thinkcmf/data_news.php?post_net=gamepoch.cn"
   )
     .then(data => {
       // console.log(data);
@@ -129,11 +133,11 @@ const insertNewsCover = newsArray => {
       htmlString +=
         '<div class="col-xs-12 newsSection" data-aos="zoom-in">      <div class="col-md-8 col-sm-12">          <a href="news.html?id=' +
         news.id +
-        '">          <h2 style="margin-top: 2%; font-size:2rem; font-weight: normal">' +
+        '">          <h2 style="margin-top: 2%; font-size:2.8rem; font-weight: normal">' +
         news.post_title +
-        '</h2>          </a>          <p style="margin-top: 5%; font-size:1.5rem; color: white">' +
+        '</h2>          </a>          <p style="margin-top: 5%; font-size:1.5rem; color: #777">' +
         news.post_excerpt +
-        '</p><p style="margin-top: 5%; color: white; font-size: 1.2rem">by ' +
+        '</p><p style="margin-top: 5%; font-weight: bold;color: #777; font-size: 1.2rem">by ' +
         news.post_source +
         " " +
         news.post_modified +
@@ -147,11 +151,11 @@ const insertNewsCover = newsArray => {
   newsImageLazyLoad.update();
 };
 
-console.log("load games");
+// console.log("load games");
 const gamesList = [
   {
     id: 1,
-    name: "NBA 2K19",
+    name: "美国篮球协会19",
     href: "https://nba2k19.gamepoch.com",
     coverImg: "../img/portfolios/games/nba2k19.jpg",
     category: "PS4",
@@ -159,7 +163,7 @@ const gamesList = [
   },
   {
     id: 2,
-    name: "NBA 2K18",
+    name: "美国篮球协会18",
     href: "https://nba2k18.gamepoch.com",
     coverImg: "../img/portfolios/games/nba2k18.jpg",
     category: "PS4",
@@ -167,7 +171,7 @@ const gamesList = [
   },
   {
     id: 3,
-    name: "The King of Fighters XIV",
+    name: "拳皇14",
     href: "https://kof.gamepoch.com",
     coverImg: "../img/portfolios/games/kof14.jpg",
     category: "PS4",
@@ -175,7 +179,7 @@ const gamesList = [
   },
   {
     id: 4,
-    name: "Hidden Dragon Legend",
+    name: "隐龙传",
     href: "https://ylz.gamepoch.com",
     coverImg: "../img/portfolios/games/hidden_dragon_legend.jpg",
     category: "PS4",
@@ -183,7 +187,7 @@ const gamesList = [
   },
   {
     id: 5,
-    name: "Spelunker",
+    name: "探险家斯皮兰卡",
     href: "https://spelunker.gamepoch.com",
     coverImg: "../img/portfolios/games/spelunker.jpg",
     category: "PS4",
@@ -191,7 +195,7 @@ const gamesList = [
   },
   {
     id: 6,
-    name: "Dark Legion",
+    name: "黑暗军团",
     href: "games.html",
     coverImg: "../img/portfolios/games/dark_legion.jpg",
     category: "PS(VR)",
@@ -199,7 +203,7 @@ const gamesList = [
   },
   {
     id: 7,
-    name: "Lunar Stone",
+    name: "月蚀：血缘崛起",
     href: "games.html",
     coverImg: "../img/portfolios/games/lunar_stone.jpg",
     category: "PS(VR)",
@@ -207,7 +211,7 @@ const gamesList = [
   },
   {
     id: 8,
-    name: "Ranch Planet",
+    name: "牧场星球",
     href: "games.html",
     coverImg: "../img/portfolios/games/ranch_planet.jpg",
     category: "PS(VR)",
@@ -215,7 +219,7 @@ const gamesList = [
   },
   {
     id: 9,
-    name: "The Illusionist-Andres Iniesta",
+    name: "幻象大师-伊涅斯塔",
     href: "games.html",
     coverImg: "../img/portfolios/games/iniesta.jpg",
     category: "PS(VR)",
@@ -223,7 +227,7 @@ const gamesList = [
   },
   {
     id: 10,
-    name: "Light Tracer",
+    name: "光之追迹者",
     href: "games.html",
     coverImg: "../img/portfolios/games/light_tracer.jpg",
     category: "PS(VR)",
@@ -231,7 +235,7 @@ const gamesList = [
   },
   {
     id: 11,
-    name: "Obduction",
+    name: "仰冲异界",
     href: "games.html",
     coverImg: "../img/portfolios/games/obduction.jpg",
     category: "PS(VR)",
@@ -239,7 +243,7 @@ const gamesList = [
   },
   {
     id: 12,
-    name: "Dream Angling",
+    name: "梦幻垂钓",
     href: "games.html",
     coverImg: "../img/portfolios/games/dream_angling.jpg",
     category: "PS(VR)",
@@ -247,7 +251,7 @@ const gamesList = [
   },
   {
     id: 13,
-    name: "Audio Beats",
+    name: "音姬",
     href: "games.html",
     coverImg: "../img/portfolios/games/audio_beats.jpg",
     category: "PS(VR)",
@@ -255,7 +259,7 @@ const gamesList = [
   },
   {
     id: 14,
-    name: "Super Comboman",
+    name: "超级连击王",
     href: "games.html",
     coverImg: "../img/portfolios/games/super_comboman.jpg",
     category: "PS",
@@ -263,7 +267,7 @@ const gamesList = [
   },
   {
     id: 15,
-    name: "Life Goes On",
+    name: "生生不息",
     href: "games.html",
     coverImg: "../img/portfolios/games/life_goes_on.jpg",
     category: "PS",
@@ -271,7 +275,7 @@ const gamesList = [
   },
   {
     id: 16,
-    name: "Volume",
+    name: "音量",
     href: "games.html",
     coverImg: "../img/portfolios/games/volume.jpg",
     category: "PS",
@@ -279,7 +283,7 @@ const gamesList = [
   },
   {
     id: 17,
-    name: "Element4l",
+    name: "四元素大冒险",
     href: "games.html",
     coverImg: "../img/portfolios/games/element4l.jpg",
     category: "PS",
@@ -287,7 +291,7 @@ const gamesList = [
   },
   {
     id: 18,
-    name: "Nihilumbra",
+    name: "虚空之虫",
     href: "games.html",
     coverImg: "../img/portfolios/games/nihilumbra.jpg",
     category: "PS",
@@ -295,7 +299,7 @@ const gamesList = [
   },
   {
     id: 19,
-    name: "Never Alone",
+    name: "永不孤单",
     href: "games.html",
     coverImg: "../img/portfolios/games/never_alone.jpg",
     category: "PS",
@@ -354,7 +358,7 @@ var mixer = mixitup(containerEl, {
 mixer
   .dataset(gamesList.filter(item => item.type.indexOf("hot") !== -1))
   .then(function(state) {
-    console.log("loaded " + state.activeDataset.length + " items");
+    // console.log("loaded " + state.activeDataset.length + " items");
     newsImageLazyLoad.update();
   });
 
@@ -392,7 +396,7 @@ function handleButtonClick(button) {
         : gamesList.filter(item => item.type.indexOf(className) !== -1)
     )
     .then(function(state) {
-      console.log("fetched " + state.activeDataset.length + " items");
+      // console.log("fetched " + state.activeDataset.length + " items");
       newsImageLazyLoad.update();
     })
     .catch(console.error.bind(console));

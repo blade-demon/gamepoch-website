@@ -13,7 +13,7 @@ $(function() {
 // 向服务器获取单条新闻
 const getNewsById = id => {
   $.get(
-    `https://newseditor.gamepoch.com/thinkcmf/data_news.php?post_net=gamepoch.com&id=${id}`
+    `https://newseditor.gamepoch.com/thinkcmf/data_news.php?post_net=gamepoch.cn&id=${id}`
   ).then(
     newsData => {
       const news = newsData[0];
