@@ -1,4 +1,4 @@
-console.log("news page include this js files");
+import "lazysizes";
 
 $(function() {
   // 获取新闻ID
@@ -18,15 +18,24 @@ const getNewsById = id => {
     newsData => {
       const news = newsData[0];
       document.title = news.post_title;
-      $("#news-container").html(`
+
+      $(".news-container__head").html(`
         <h3>${news.post_title}</h3>
         <p>${news.post_modified}</p>
-        <p>${news.post_source}</p>
-          ${news.post_content.replace(
-            /http\:\/\/139.196.239.213/g,
-            "https://newseditor.gamepoch.com"
-          )}
+        <p>${news.post_source}</p>`);
+
+      $(".news-container__body").html(`
+          ${news.post_content
+            .replace(
+              /<img src=/g,
+              '<img class="lazyload" src="https://via.placeholder.com/350x150" data-src='
+            )
+            .replace(
+              /http\:\/\/139.196.239.213/g,
+              "https://newseditor.gamepoch.com"
+            )}
       `);
+      newsImageLazyLoad.update();
     },
     error => {
       console.error(error);

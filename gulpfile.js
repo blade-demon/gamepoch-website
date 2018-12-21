@@ -157,13 +157,13 @@ gulp.task("browserify", ["babel"], function() {
   ];
 
   var tasks = entryFiles.map(function(entry) {
-    return browserify({ entries: entry, debug: true })
+    return browserify({ entries: [entry], debug: true })
       .bundle()
-      .pipe(source("index.js"))
+      .pipe(source(entry))
       .pipe(buffer())
       .pipe($.sourcemaps.init({ loadMaps: true }))
       .pipe($.sourcemaps.write("."))
-      .pipe(gulp.dest("build/js"));
+      .pipe(gulp.dest("./"));
   });
 
   //创建一个合并流
@@ -199,13 +199,15 @@ gulp.task("vendorJS", function() {
   var srcFiles = [
     ".tmp/vendors/jquery/dist/jquery.js",
     ".tmp/vendors/bootstrap/dist/js/bootstrap.js",
-    ".tmp/vendors/aos/dist/aos.js"
+    ".tmp/vendors/aos/dist/aos.js",
+    ".tmp/vendors/vanilla-lazyload/dist/lazyload.js"
   ];
   if (options.env === "production") {
     srcFiles = [
       ".tmp/vendors/jquery/dist/jquery.min.js",
       ".tmp/vendors/bootstrap/dist/js/bootstrap.min.js",
-      ".tmp/vendors/aos/dist/aos.js"
+      ".tmp/vendors/aos/dist/aos.js",
+      ".tmp/vendors/vanilla-lazyload/dist/lazyload.min.js"
     ];
   }
   return gulp

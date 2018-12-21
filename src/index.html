@@ -299,14 +299,23 @@
             <h4 class="sub-title " style="color:#262E3B; ">在这里找到我们</h4>
             <div class="contact-info row ">
               <ul class="contact-list">
-                <li class="contact-list-title">
-                  <i class="fa fa-envelope "></i>contact@gamepoch.com</li>
                 <li class="contact-list-title ">
-                  <i class="fa fa-weixin "></i>Gamepoch星游纪</li>
+                  <a href="mailto:contact@gamepoch.com" target="_blank " rel="noopener " data-toggle="tooltip "
+                    data-placement="right
+                      ">
+                    <i class="fa fa-envelope "></i>contact@gamepoch.com</li>
+                </a>
+                </li>
+                <li id="weixin-icon" class="contact-list-title ">
+                  <a href="#">
+                    <i class="fa fa-weixin"></i>Gamepoch星游纪</li>
+                </a>
+                </li>
                 <li class="contact-list-title ">
-                  <a href="http://weibo.com/gamepoch " rel="noopener " data-toggle="tooltip " data-placement="right"
+                  <a href="http://weibo.com/gamepoch " rel="noopener " data-toggle="tooltip " data-placement="right
+                              "
                     title="Follow Gamepoch on Weibo " target="_blank ">
-                    <i class="fa fa-weibo "></i>关注 @Gamepoch星游纪
+                    <i class="fa fa-weibo "></i>follow @Gamepoch星游纪
                   </a>
                 </li>
               </ul>
@@ -371,6 +380,12 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <img class="lazy" data-src="img/qrcode.jpg" alt="微信二维码">
     </div>
   </div>
   <!-- End Footer Bottom -->

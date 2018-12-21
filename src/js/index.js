@@ -19,14 +19,24 @@ var newsArray = [];
 $(document).ready(function() {
   $(document).on("scroll", onScroll);
 
+  $("#weixin-icon").on("click", function() {
+    $("#modal").modal();
+  });
+
+  $(".modal-dialog").on("click", function() {
+    $("#modal").modal("hide");
+  });
+
   var navMain = $(".navbar-collapse"); // avoid dependency on #id
   navMain.on("click", "a:not([data-toggle])", null, function() {
     navMain.collapse("hide");
   });
 
   $('a[href^="#"]').on("click", function(e) {
-    // console.log("click");
     e.preventDefault();
+    if ($(this).attr("href") === "#") {
+      return;
+    }
     $(document).on("scroll");
 
     $("a").each(function() {
@@ -141,7 +151,7 @@ const insertNewsCover = newsArray => {
         news.post_source +
         " " +
         news.post_modified +
-        '</p>                </div>      <div class="col-md-4 col-sm-12">          <img class="img-responsive lazy" alt="新闻图片" data-src="https://newseditor.gamepoch.com/thinkcmf/data/upload/' +
+        '</p>                </div>      <div class="col-md-4 col-sm-12"> <img class="img-responsive lazy" alt="新闻图片" data-src="https://newseditor.gamepoch.com/thinkcmf/data/upload/' +
         JSON.parse(news.smeta).thumb +
         '">      </div>      </div>  ';
     }
