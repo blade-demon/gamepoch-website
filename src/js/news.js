@@ -1,4 +1,5 @@
 import "lazysizes";
+import "../css/style.css";
 
 $(function() {
   // 获取新闻ID

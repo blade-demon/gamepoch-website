@@ -1,6 +1,6 @@
 // console.log("games page load this file");
 // document.title = "Game";
-
+import "../css/style.css";
 const gamesList = [
   {
     id: 6,
