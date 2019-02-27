@@ -51,6 +51,7 @@
     "minimatch": "^3.0.4",
     "minimist": "^1.2.0",
     "mixitup": "^3.3.0",
+    "node-sass": "^4.11.0",
     "pump": "^1.0.2",
     "uglify-js": "^3.0.25",
     "vanilla-lazyload": "^10.19.0",
