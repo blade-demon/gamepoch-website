@@ -1,5 +1,8 @@
 // console.log("games page load this file");
 // document.title = "Game";
+import "jquery/dist/jquery.min.js";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
 import "../css/style.css";
 const gamesList = [
   {
