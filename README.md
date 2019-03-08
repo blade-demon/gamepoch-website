@@ -51,4 +51,4 @@ Webapp 开发脚手架，使用 gulp，babel, browserify 搭建的前端开发�
 
 #部署
 `scp -r dist/* root@139.196.239.213:/root/gamepoch-website-en-test`
-`scp -P 2222 -r build/* root@139.196.239.213:/root/gamepoch-website-cn`
+`scp -P 22 -r dist/* root@139.196.239.213:/root/gamepoch-website-cn`

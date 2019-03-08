@@ -1,4 +1,8 @@
 import "lazysizes";
+import "jquery/dist/jquery.min.js";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
+import "font-awesome/css/font-awesome.min.css";
 import "../css/style.css";
 
 $(function() {
@@ -6,7 +10,6 @@ $(function() {
   var params = getJsonFromUrl();
   var newsId = params.id;
   if (newsId !== undefined) {
-    console.log(newsId);
     getNewsById(newsId);
   }
 });
@@ -19,9 +22,9 @@ const getNewsById = id => {
     newsData => {
       const news = newsData[0];
       document.title = news.post_title;
-
-      $(".news-container__head").html(`
-        <h3>${news.post_title}</h3>
+      console.log(news);
+      $(".news-container__header").html(`
+        <h3>${news.post_excerpt}</h3>
         <p>${news.post_modified}</p>
         <p>${news.post_source}</p>`);
 
