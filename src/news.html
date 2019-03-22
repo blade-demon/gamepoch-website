@@ -2,402 +2,399 @@
 <html lang="zh-cn">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="This is Gamepoch official website.">
-  <meta name="author" content="gamepoch">
-  <meta name="theme-color" content="#317EFB" />
-  <title>Gamepoch星游纪</title>
-  <link rel="icon" href="favicon.ico">
-  <style>
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is Gamepoch official website.">
+	<meta name="author" content="gamepoch">
+	<meta name="theme-color" content="#317EFB" />
+	<title>Gamepoch星游纪</title>
+	<link rel="icon" href="favicon.ico">
+	<style>
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
 
-    /* cyrillic */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
+		/* cyrillic */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
 
-    /* greek-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
+		/* greek-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+1F00-1FFF;
+		}
 
-    /* greek */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
+		/* greek */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0370-03FF;
+		}
 
-    /* vietnamese */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-    }
+		/* vietnamese */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
 
-    /* latin-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
+		/* latin-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
 
-    /* latin */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
+		/* latin */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
 
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
 
-    /* cyrillic */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
+		/* cyrillic */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
 
-    /* greek-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
+		/* greek-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+1F00-1FFF;
+		}
 
-    /* greek */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
+		/* greek */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0370-03FF;
+		}
 
-    /* vietnamese */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-    }
+		/* vietnamese */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
 
-    /* latin-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
+		/* latin-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
 
-    /* latin */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
+		/* latin */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
 
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
 
-    /* cyrillic */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
+		/* cyrillic */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
 
-    /* greek-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
+		/* greek-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+1F00-1FFF;
+		}
 
-    /* greek */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
+		/* greek */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0370-03FF;
+		}
 
-    /* vietnamese */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-    }
+		/* vietnamese */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
 
-    /* latin-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
+		/* latin-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
 
-    /* latin */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
+		/* latin */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+	</style>
+	<style>
+		/* cyrillic */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Tvs9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
 
-  </style>
-  <style>
-    /* cyrillic */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 300;
-      src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Tvs9CAZek1wEt.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
+		/* vietnamese */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Ttc9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
 
-    /* vietnamese */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 300;
-      src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Ttc9CAZek1wEt.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-    }
+		/* latin-ext */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0TtM9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
 
-    /* latin-ext */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 300;
-      src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0TtM9CAZek1wEt.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
+		/* latin */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Tus9CAZek1w.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
 
-    /* latin */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 300;
-      src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Tus9CAZek1w.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
+		/* cyrillic */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752HT8Gl-1PK62t.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
 
-    /* cyrillic */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752HT8Gl-1PK62t.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
+		/* vietnamese */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fj8Gl-1PK62t.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
 
-    /* vietnamese */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fj8Gl-1PK62t.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-    }
+		/* latin-ext */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fz8Gl-1PK62t.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
 
-    /* latin-ext */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fz8Gl-1PK62t.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
+		/* latin */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
 
-    /* latin */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
+		/* cyrillic */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTvs9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
 
-    /* cyrillic */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTvs9CAZek1wEt.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
+		/* vietnamese */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTtc9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
 
-    /* vietnamese */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTtc9CAZek1wEt.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-    }
+		/* latin-ext */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTtM9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
 
-    /* latin-ext */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTtM9CAZek1wEt.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
+		/* latin */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTus9CAZek1w.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+	</style>
+	<style type="text/css">
+		h3 {
+			color: #000;
+			font-family: "open sans", sans-serif;
+			margin-bottom: 20px;
+			/* text-align: center; */
+			font-weight: bold;
+			font-size: 3rem;
+		}
 
-    /* latin */
-    @font-face {
-      font-family: 'Oswald';
-      font-style: normal;
-      font-weight: 700;
-      src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTus9CAZek1w.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-  </style>
-  <style type="text/css">
-    h3 {
-      color: #000;
-      font-family: "open sans", sans-serif;
-      margin-bottom: 20px;
-      /* text-align: center; */
-      font-weight: bold;
-      font-size: 3rem;
-    }
-
-    .news-container__body {
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-    }
-
-  </style>
+		.news-container__body {
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+	</style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <div class="navbar navbar-default navbar-fixed-top menu-top" style="background-color:black;">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="/">
-          <img class="lazy" src="img/logo.png" alt="logo" id="gamepoch-logo">
-        </a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right" style="margin-top: 0.6rem;">
-          <li><a class="page-scroll" href="/">主页</a></li>
-          <li><a class="page-scroll" href="/#games">游戏</a></li>
-          <li><a class="page-scroll" href="/#news">新闻</a></li>
-          <li><a class="page-scroll" href="/#about">关于</a></li>
-          <li><a class="page-scroll" href="/#events">大事记</a></li>
-          <li><a class="page-scroll" href="/#contact">联系我们</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- End Navbar -->
-  <div class="container news-container" style="margin-top: 10rem">
-    <!-- <h1>显示新闻内容</h1> -->
-    <div class="news-container__header">
-    </div>
-    <div class="news-container__body">
-    </div>
+	<!-- Navbar -->
+	<div class="navbar navbar-default navbar-fixed-top menu-top" style="background-color:black;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/">
+					<img class="lazy" src="img/logo.png" alt="logo" id="gamepoch-logo">
+				</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right" style="margin-top: 0.6rem;">
+					<li><a class="page-scroll" href="/">主页</a></li>
+					<li><a class="page-scroll" href="/#games">游戏</a></li>
+					<li><a class="page-scroll" href="/#news">新闻</a></li>
+					<li><a class="page-scroll" href="/#about">关于</a></li>
+					<li><a class="page-scroll" href="/#events">大事记</a></li>
+					<li><a class="page-scroll" href="/#contact">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- End Navbar -->
+	<div class="container news-container" style="margin-top: 10rem">
+		<!-- <h1>显示新闻内容</h1> -->
+		<div class="news-container__header">
+		</div>
+		<div class="news-container__body">
+		</div>
 
-  </div>
+	</div>
 
-  <div class="footer-bottom">
-    <div class="container ">
-      <div class="row ">
-        <div class="col-sm-12 text-center ">
-          <div class="text-center ">沪ICP证：沪B2-20160111 | 沪网文（2016）0033-033号</div>
-          <div class="text-center ">地址：上海市真北路958号天地科技广场1号楼1202室</div>
-          <div class="text-center ">© 2018 Gamepoch, Inc. All rights reserved.</div>
-          <div class="text-center ">
-            电话：021-60934278
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <script>
-    (function (b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l;
-      b[l] || (b[l] =
-        function () {
-          (b[l].q = b[l].q || []).push(arguments)
-        });
-      b[l].l = +new Date;
-      e = o.createElement(i);
-      r = o.getElementsByTagName(i)[0];
-      e.src = 'https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-82639755-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
+	<div class="footer-bottom">
+		<div class="container ">
+			<div class="row ">
+				<div class="col-sm-12 text-center ">
+					<div class="text-center ">沪ICP证 沪B2-20160111 | 沪网文（2016）0033-033号 | <a target="_blank"
+							href="http://www.miitbeian.gov.cn">沪ICP备15039130号</a> </div>
+					<div class="text-center ">地址：上海市真北路958号天地科技广场1号楼1202室</div>
+					<div class="text-center ">© 2018 Gamepoch, Inc. All rights reserved.</div>
+					<div class="text-center ">
+						电话：021-60934278
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		(function (b, o, i, l, e, r) {
+			b.GoogleAnalyticsObject = l;
+			b[l] || (b[l] =
+				function () {
+					(b[l].q = b[l].q || []).push(arguments)
+				});
+			b[l].l = +new Date;
+			e = o.createElement(i);
+			r = o.getElementsByTagName(i)[0];
+			e.src = 'https://www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-82639755-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 </body>
 
 </html>

@@ -2,654 +2,689 @@
 <html lang="zh-cn">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="This is Gamepoch official website.">
-  <meta name="author" content="gamepoch">
-  <meta name="theme-color" content="#317EFB" />
-  <title>Gamepoch星游纪</title>
-  <link rel="icon" href="favicon.ico">
-  <style>
-    /* cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0370-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-  </style>
-  <style>
-    /* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Tvs9CAZek1wEt.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Ttc9CAZek1wEt.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0TtM9CAZek1wEt.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Tus9CAZek1w.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752HT8Gl-1PK62t.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fj8Gl-1PK62t.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fz8Gl-1PK62t.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTvs9CAZek1wEt.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTtc9CAZek1wEt.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTtM9CAZek1wEt.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTus9CAZek1w.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-  </style>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is Gamepoch official website.">
+	<meta name="author" content="gamepoch">
+	<meta name="theme-color" content="#317EFB" />
+	<title>Gamepoch星游纪</title>
+	<link rel="icon" href="favicon.ico">
+	<style>
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
+
+		/* cyrillic */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		/* greek-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+1F00-1FFF;
+		}
+
+		/* greek */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		/* vietnamese */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
+
+		/* latin-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		/* latin */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
+
+		/* cyrillic */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		/* greek-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+1F00-1FFF;
+		}
+
+		/* greek */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		/* vietnamese */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
+
+		/* latin-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		/* latin */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 600;
+			src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		/* cyrillic-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+		}
+
+		/* cyrillic */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		/* greek-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+1F00-1FFF;
+		}
+
+		/* greek */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0370-03FF;
+		}
+
+		/* vietnamese */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
+
+		/* latin-ext */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		/* latin */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+	</style>
+	<style>
+		/* cyrillic */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Tvs9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		/* vietnamese */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Ttc9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
+
+		/* latin-ext */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0TtM9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		/* latin */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0Tus9CAZek1w.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		/* cyrillic */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752HT8Gl-1PK62t.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		/* vietnamese */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fj8Gl-1PK62t.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
+
+		/* latin-ext */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fz8Gl-1PK62t.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		/* latin */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		/* cyrillic */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTvs9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		}
+
+		/* vietnamese */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTtc9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+		}
+
+		/* latin-ext */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTtM9CAZek1wEt.woff2) format('woff2');
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+		}
+
+		/* latin */
+		@font-face {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTus9CAZek1w.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+	</style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <div class="navbar navbar-default navbar-fixed-top menu-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="#">
-          <img class="lazyload" src="img/logo.png" alt="logo" id="gamepoch-logo">
-        </a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <nav>
-          <ul class="nav navbar-nav navbar-right" style="margin-top: 0.6rem;">
-            <li><a class="page-scroll active" href="#home">主页</a></li>
-            <li><a class="page-scroll" href="#games">游戏</a></li>
-            <li><a class="page-scroll" href="#news">新闻</a></li>
-            <li><a class="page-scroll" href="#about">关于</a></li>
-            <li><a class="page-scroll" href="#events">大事记</a></li>
-            <li><a class="page-scroll" href="#contact">联系我们</a></li>
-            <li><a class="page-scroll" href="http://nba2k19.gamepoch.com" style="color:#fa2841;">NBA 2K19</a></li>
-            <li><a class="page-scroll" href="http://www.gamepoch.com">English</a></li>
-            <!--<li><a class="page-scroll" href="#contact">Contact</a></li>-->
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-  <!-- End Navbar -->
-  <!-- Home -->
-  <section id="home" class="welcome-area">
-    <div class="welcome-slider-area">
-      <div id="welcome-slide-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators carousel-indicators-slider">
-          <li data-target="#welcome-slide-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#welcome-slide-carousel" data-slide-to="1" class=""></li>
-          <li data-target="#welcome-slide-carousel" data-slide-to="2" class=""></li>
-          <li data-target="#welcome-slide-carousel" data-slide-to="3" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="item active">
-            <div class="single-slide-item slide-1">
-              <div class="single-slide-item-table">
-                <div class="single-slide-item-tablecell">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <h2 class="single-slide-item-tablecell__title">Gamepoch是索尼互动娱乐在中国非常重要的合作伙伴</h2>
-                        <span></span>
-                        <p>添田武人 索尼互动娱乐（上海）有限公司 总裁</p>
-                        <a class="btn btn-lg btn-custom" href="#about">了解更多</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="single-slide-item slide-2">
-              <div class="single-slide-item-table">
-                <div class="single-slide-item-tablecell">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <h2 class="single-slide-item-tablecell__title">Gamepoch星 •
-                          奇点体验店项目将对于改变中国主机游戏现状起到积极作用,将成为中国主机及VR历史上浓厚的一笔</h2>
-                        <span></span>
-                        <p>胡斌 掌趣科技 CEO</p>
-                        <a class="btn btn-lg btn-custom" href="#about">了解更多</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="single-slide-item slide-3">
-              <div class="single-slide-item-table">
-                <div class="single-slide-item-tablecell">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <h2 class="single-slide-item-tablecell__title">Gamepoch是体育之窗在主机游戏领域最重要的合作伙伴，将共同推进体育主机游戏，电竞赛事，中超等授权游戏</h2>
-                        <span></span>
-                        <p>陈亿飙 体育之窗 战略股东</p>
-                        <a class="btn btn-lg btn-custom" href="#about">了解更多</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="single-slide-item slide-4">
-              <div class="single-slide-item-table">
-                <div class="single-slide-item-tablecell">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <h2 class="single-slide-item-tablecell__title">SNK感受到了Gamepoch在游戏引进上的专业能力以及对游戏产品运营的成熟经验</h2>
-                        <span></span>
-                        <p>小田泰之 《拳皇14》制作人</p>
-                        <a class="btn btn-lg btn-custom" href="#about">了解更多</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Home -->
-  <!-- Our games -->
-  <section id="games" class="section-padding">
-    <div class="container">
-      <div class="row text-center">
-        <div class="section-title text-center">
-          <h2 class="section-title-white">游戏</h2>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <ul class="game-filters clearfix" data-ref="controls">
-        <li>
-          <span type="button" class="filter active" data-filter="hot" data-ref="filter">火热</span>
-        </li>
-        <li>
-          <span type="button" class="filter" data-filter="new" data-ref="filter">最新</span>
-        </li>
-        <li>
-          <span type="button" class="filter" data-filter="all" data-ref="filter">全部</span>
-        </li>
-      </ul>
-      <div class="game-list-container" data-ref="container" data-aos="zoom-in">
-        <!-- Game list container through js script. -->
-      </div>
-    </div>
+	<!-- Navbar -->
+	<div class="navbar navbar-default navbar-fixed-top menu-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#">
+					<img class="lazyload" src="img/logo.png" alt="logo" id="gamepoch-logo">
+				</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<nav>
+					<ul class="nav navbar-nav navbar-right" style="margin-top: 0.6rem;">
+						<li><a class="page-scroll active" href="#home">主页</a></li>
+						<li><a class="page-scroll" href="#games">游戏</a></li>
+						<li><a class="page-scroll" href="#news">新闻</a></li>
+						<li><a class="page-scroll" href="#about">关于</a></li>
+						<li><a class="page-scroll" href="#events">大事记</a></li>
+						<li><a class="page-scroll" href="#contact">联系我们</a></li>
+						<li><a class="page-scroll" href="http://nba2k19.gamepoch.com" style="color:#fa2841;">NBA 2K19</a></li>
+						<li><a class="page-scroll" href="http://www.gamepoch.com">English</a></li>
+						<!--<li><a class="page-scroll" href="#contact">Contact</a></li>-->
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- End Navbar -->
+	<!-- Home -->
+	<section id="home" class="welcome-area">
+		<div class="welcome-slider-area">
+			<div id="welcome-slide-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+				<ol class="carousel-indicators carousel-indicators-slider">
+					<li data-target="#welcome-slide-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#welcome-slide-carousel" data-slide-to="1" class=""></li>
+					<li data-target="#welcome-slide-carousel" data-slide-to="2" class=""></li>
+					<li data-target="#welcome-slide-carousel" data-slide-to="3" class=""></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="single-slide-item slide-1">
+							<div class="single-slide-item-table">
+								<div class="single-slide-item-tablecell">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="single-slide-item-tablecell__title">Gamepoch是索尼互动娱乐在中国非常重要的合作伙伴</h2>
+												<span></span>
+												<p>添田武人 索尼互动娱乐（上海）有限公司 总裁</p>
+												<a class="btn btn-lg btn-custom" href="#about">了解更多</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="single-slide-item slide-2">
+							<div class="single-slide-item-table">
+								<div class="single-slide-item-tablecell">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="single-slide-item-tablecell__title">Gamepoch星 •
+													奇点体验店项目将对于改变中国主机游戏现状起到积极作用,将成为中国主机及VR历史上浓厚的一笔</h2>
+												<span></span>
+												<p>胡斌 掌趣科技 CEO</p>
+												<a class="btn btn-lg btn-custom" href="#about">了解更多</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="single-slide-item slide-3">
+							<div class="single-slide-item-table">
+								<div class="single-slide-item-tablecell">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="single-slide-item-tablecell__title">
+													Gamepoch是体育之窗在主机游戏领域最重要的合作伙伴，将共同推进体育主机游戏，电竞赛事，中超等授权游戏</h2>
+												<span></span>
+												<p>陈亿飙 体育之窗 战略股东</p>
+												<a class="btn btn-lg btn-custom" href="#about">了解更多</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="single-slide-item slide-4">
+							<div class="single-slide-item-table">
+								<div class="single-slide-item-tablecell">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="single-slide-item-tablecell__title">SNK感受到了Gamepoch在游戏引进上的专业能力以及对游戏产品运营的成熟经验</h2>
+												<span></span>
+												<p>小田泰之 《拳皇14》制作人</p>
+												<a class="btn btn-lg btn-custom" href="#about">了解更多</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Home -->
+	<!-- Our games -->
+	<section id="games" class="section-padding">
+		<div class="container">
+			<div class="row text-center">
+				<div class="section-title text-center">
+					<h2 class="section-title-white">游戏</h2>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<ul class="game-filters clearfix" data-ref="controls">
+				<li>
+					<span type="button" class="filter active" data-filter="hot" data-ref="filter">火热</span>
+				</li>
+				<li>
+					<span type="button" class="filter" data-filter="new" data-ref="filter">最新</span>
+				</li>
+				<li>
+					<span type="button" class="filter" data-filter="all" data-ref="filter">全部</span>
+				</li>
+			</ul>
+			<div class="game-list-container" data-ref="container" data-aos="zoom-in">
+				<!-- Game list container through js script. -->
+			</div>
+		</div>
 
-  </section>
-  <!-- End Our games -->
-  <!-- News -->
-  <section id="news" class="gamepoch-news section-padding ">
-    <div class="container " data-aos="zoom-in ">
-      <div class="row text-center ">
-        <div class="section-title text-center ">
-          <h2 class="section-title-white " style="color:white; ">新闻</h2>
-          <span class="section-title-span "></span>
-          <!-- <p class="section-title-white ">Recent news</p> -->
-        </div>
-      </div>
+	</section>
+	<!-- End Our games -->
+	<!-- News -->
+	<section id="news" class="gamepoch-news section-padding ">
+		<div class="container " data-aos="zoom-in ">
+			<div class="row text-center ">
+				<div class="section-title text-center ">
+					<h2 class="section-title-white " style="color:white; ">新闻</h2>
+					<span class="section-title-span "></span>
+					<!-- <p class="section-title-white ">Recent news</p> -->
+				</div>
+			</div>
 
-      <div id="news-container" class="row">
-        <!-- Dynamic add news through js script -->
-      </div>
+			<div id="news-container" class="row">
+				<!-- Dynamic add news through js script -->
+			</div>
 
-    </div>
-  </section>
-  <!-- End News -->
-  <!-- About Us -->
-  <section id="about" class="about-us section-padding ">
-    <div class="container " data-aos="zoom-in ">
-      <div class="row text-center ">
-        <div class="section-title text-center ">
-          <h2>关于我们</h2>
-          <span></span>
-          <p style="text-align:left;">Gamepoch星游纪是一家位于上海的游戏发行商。我们致力于游戏发行和电子竞技赛事运营。通过最新技术为中国玩家带来优质的游戏体验，扩大了玩家对主机游戏的认知度，提高主机游戏在中国的影响力。</p>
-          <p style="text-align:left;">我们与海外诸多行业大型游戏公司保持长期稳定的合作关系。2016年我们与SNK合作在中国发行《拳皇14》并且实现了全球同发。2017年我们与Take
-            2合作发行了《NBA
-            2K18》中国版。在2018年，我们与Take 2再度合作，为中国玩家带来了NBA 2K系列二十周年作品《NBA 2K19》。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End About us -->
-  <!-- Events -->
-  <section id="events" class="our-events section-padding lazyload" data-src="img/events-bg.jpg">
-    <div class="container ">
-      <div class="row text-center ">
-        <div class="section-title text-center " data-aos="zoom-in" data-aos-once="false ">
-          <h2 class="section-title-white " style="color:white; ">大事记</h2>
-          <span class="section-title-span "></span>
-          <!-- <p class="section-title-white ">Record glorious deeds</p> -->
-        </div>
-      </div>
-      <div class="row events-container ">
-        <div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
-          <div class="process-item text-center process-item-alt ">
-            <div class="process-item-icon ">
-              <span class="ion-android-star-outline "></span>
-            </div>
-            <div class="process-item-content ">
-              <span class="process-item-number ">1</span>
-              <h3 class="process-item-title ">2016年7月-8月Gamepoch线下体验店环球港快闪店。</h3>
-            </div>
-          </div>
-        </div>
-        <div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
-          <div class="process-item highlight text-center process-item-alt ">
-            <div class="process-item-icon ">
-              <span class="ion-android-star-outline "></span>
-            </div>
-            <div class="process-item-content ">
-              <span class="process-item-number ">2</span>
-              <h3 class="process-item-title ">2016年8月23日Gamepoch代理发行《拳皇14》上市，首次实现中国主机真正意义上的全球同步发行。</h3>
-            </div>
-          </div>
-        </div>
-        <div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
-          <div class="process-item text-center process-item-alt ">
-            <div class="process-item-icon ">
-              <span class="ion-android-star-outline "></span>
-            </div>
-            <div class="process-item-content ">
-              <span class="process-item-number ">3</span>
-              <h3 class="process-item-title ">2016年9月至2017年1月我们Gamepoch举办首届《拳皇14》中国官方电竞赛。
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
-          <div class="process-item highlight text-center process-item-alt ">
-            <div class="process-item-icon ">
-              <span class="ion-android-star-outline "></span>
-            </div>
-            <div class="process-item-content ">
-              <span class="process-item-number ">4</span>
-              <h3 class="process-item-title ">2017年7月26日，索尼PlayStation中国发布会上正式宣布由星游纪引进并发行《NBA 2K18》中国版。
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
-          <div class="process-item text-center process-item-alt ">
-            <div class="process-item-icon ">
-              <span class="ion-android-star-outline "></span>
-            </div>
-            <div class="process-item-content ">
-              <span class="process-item-number ">5</span>
-              <h3 class="process-item-title ">2017年10月20日-12月23日，举办《NBA 2k18》亚洲锦标赛中国资格赛。</h3>
-            </div>
-          </div>
-        </div>
-        <div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
-          <div class="process-item highlight text-center process-item-alt ">
-            <div class="process-item-icon ">
-              <span class="ion-android-star-outline "></span>
-            </div>
-            <div class="process-item-content ">
-              <span class="process-item-number ">6</span>
-              <h3 class="process-item-title ">2018年8月2日，索尼PlayStation 中国发布会上正式宣布由星游纪发行《NBA 2k19》国行版。首次实现游戏赛场内中文解说。</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Events -->
-  <!-- Contact Us -->
-  <section id="contact" class="contact-us section-padding ">
-    <div class="container ">
-      <div class="row ">
-        <div class="section-title text-center " data-aos="zoom-in ">
-          <h2>联系我们</h2>
-          <span></span>
-        </div>
-        <div class="col-xs-12 " data-aos="zoom-in ">
-          <div class="contact-right box-padding ">
-            <h4 class="sub-title " style="color:#262E3B; ">在这里找到我们</h4>
-            <div class="contact-info row ">
-              <ul class="contact-list">
-                <li class="contact-list-title ">
-                  <a href="mailto:contact@gamepoch.com" target="_blank " rel="noopener " data-toggle="tooltip "
-                    data-placement="right
+		</div>
+	</section>
+	<!-- End News -->
+	<!-- About Us -->
+	<section id="about" class="about-us section-padding ">
+		<div class="container " data-aos="zoom-in ">
+			<div class="row text-center ">
+				<div class="section-title text-center ">
+					<h2>关于我们</h2>
+					<span></span>
+					<p style="text-align:left;">
+						Gamepoch星游纪是一家位于上海的游戏发行商。我们致力于游戏发行和电子竞技赛事运营。通过最新技术为中国玩家带来优质的游戏体验，扩大了玩家对主机游戏的认知度，提高主机游戏在中国的影响力。</p>
+					<p style="text-align:left;">我们与海外诸多行业大型游戏公司保持长期稳定的合作关系。2016年我们与SNK合作在中国发行《拳皇14》并且实现了全球同发。2017年我们与Take
+						2合作发行了《NBA
+						2K18》中国版。在2018年，我们与Take 2再度合作，为中国玩家带来了NBA 2K系列二十周年作品《NBA 2K19》。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End About us -->
+	<!-- Events -->
+	<section id="events" class="our-events section-padding lazyload" data-src="img/events-bg.jpg">
+		<div class="container ">
+			<div class="row text-center ">
+				<div class="section-title text-center " data-aos="zoom-in" data-aos-once="false ">
+					<h2 class="section-title-white " style="color:white; ">大事记</h2>
+					<span class="section-title-span "></span>
+					<!-- <p class="section-title-white ">Record glorious deeds</p> -->
+				</div>
+			</div>
+			<div class="row events-container ">
+				<div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
+					<div class="process-item text-center process-item-alt ">
+						<div class="process-item-icon ">
+							<span class="ion-android-star-outline "></span>
+						</div>
+						<div class="process-item-content ">
+							<span class="process-item-number ">1</span>
+							<h3 class="process-item-title ">2016年7月-8月Gamepoch线下体验店环球港快闪店。</h3>
+						</div>
+					</div>
+				</div>
+				<div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
+					<div class="process-item highlight text-center process-item-alt ">
+						<div class="process-item-icon ">
+							<span class="ion-android-star-outline "></span>
+						</div>
+						<div class="process-item-content ">
+							<span class="process-item-number ">2</span>
+							<h3 class="process-item-title ">2016年8月23日Gamepoch代理发行《拳皇14》上市，首次实现中国主机真正意义上的全球同步发行。</h3>
+						</div>
+					</div>
+				</div>
+				<div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
+					<div class="process-item text-center process-item-alt ">
+						<div class="process-item-icon ">
+							<span class="ion-android-star-outline "></span>
+						</div>
+						<div class="process-item-content ">
+							<span class="process-item-number ">3</span>
+							<h3 class="process-item-title ">2016年9月至2017年1月我们Gamepoch举办首届《拳皇14》中国官方电竞赛。
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
+					<div class="process-item highlight text-center process-item-alt ">
+						<div class="process-item-icon ">
+							<span class="ion-android-star-outline "></span>
+						</div>
+						<div class="process-item-content ">
+							<span class="process-item-number ">4</span>
+							<h3 class="process-item-title ">2017年7月26日，索尼PlayStation中国发布会上正式宣布由星游纪引进并发行《NBA 2K18》中国版。
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
+					<div class="process-item text-center process-item-alt ">
+						<div class="process-item-icon ">
+							<span class="ion-android-star-outline "></span>
+						</div>
+						<div class="process-item-content ">
+							<span class="process-item-number ">5</span>
+							<h3 class="process-item-title ">2017年10月20日-12月23日，举办《NBA 2k18》亚洲锦标赛中国资格赛。</h3>
+						</div>
+					</div>
+				</div>
+				<div class="events-container__item " data-aos="zoom-in " data-aos-once="false ">
+					<div class="process-item highlight text-center process-item-alt ">
+						<div class="process-item-icon ">
+							<span class="ion-android-star-outline "></span>
+						</div>
+						<div class="process-item-content ">
+							<span class="process-item-number ">6</span>
+							<h3 class="process-item-title ">2018年8月2日，索尼PlayStation 中国发布会上正式宣布由星游纪发行《NBA 2k19》国行版。首次实现游戏赛场内中文解说。</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Events -->
+	<!-- Contact Us -->
+	<section id="contact" class="contact-us section-padding ">
+		<div class="container ">
+			<div class="row ">
+				<div class="section-title text-center " data-aos="zoom-in ">
+					<h2>联系我们</h2>
+					<span></span>
+				</div>
+				<div class="col-xs-12 " data-aos="zoom-in ">
+					<div class="contact-right box-padding ">
+						<h4 class="sub-title " style="color:#262E3B; ">在这里找到我们</h4>
+						<div class="contact-info row ">
+							<ul class="contact-list">
+								<li class="contact-list-title ">
+									<a href="mailto:contact@gamepoch.com" target="_blank " rel="noopener " data-toggle="tooltip "
+										data-placement="right
                       ">
-                    <i class="fa fa-envelope "></i>contact@gamepoch.com</li>
-                </a>
-                </li>
-                <li id="weixin-icon" class="contact-list-title ">
-                  <a href="#">
-                    <i class="fa fa-weixin"></i>Gamepoch星游纪</li>
-                </a>
-                </li>
-                <li class="contact-list-title ">
-                  <a href="http://weibo.com/gamepoch " rel="noopener " data-toggle="tooltip " data-placement="right
-                              "
-                    title="Follow Gamepoch on Weibo " target="_blank ">
-                    <i class="fa fa-weibo "></i>follow @Gamepoch星游纪
-                  </a>
-                </li>
-              </ul>
-              <ul class="contact-list">
-                <li class="contact-list-title">
-                  <a href="https://twitter.com/gamepochsh " rel="noopener " data-toggle="tooltip " data-placement="right"
-                    title="Follow Gamepoch on Twitter " target="_blank ">
-                    <i class="fa fa-twitter-square "></i>关注 @GamepochSH
-                  </a>
-                </li>
-                <li class="contact-list-title">
-                  <a href="https://www.facebook.com/profile.php?id=100011243130897 " rel="noopener " data-toggle="tooltip "
-                    data-placement="right" title="Follow Gamepoch on Facebook " target="_blank ">
-                    <i class="fa fa-facebook-official"></i>关注 @GamepochSH
-                  </a>
-                </li>
+										<i class="fa fa-envelope "></i>contact@gamepoch.com</li>
+								</a>
+								</li>
+								<li id="weixin-icon" class="contact-list-title ">
+									<a href="#">
+										<i class="fa fa-weixin"></i>Gamepoch星游纪</li>
+								</a>
+								</li>
+								<li class="contact-list-title ">
+									<a href="http://weibo.com/gamepoch " rel="noopener " data-toggle="tooltip " data-placement="right
+                              " title="Follow Gamepoch on Weibo " target="_blank ">
+										<i class="fa fa-weibo "></i>follow @Gamepoch星游纪
+									</a>
+								</li>
+							</ul>
+							<ul class="contact-list">
+								<li class="contact-list-title">
+									<a href="https://twitter.com/gamepochsh " rel="noopener " data-toggle="tooltip "
+										data-placement="right" title="Follow Gamepoch on Twitter " target="_blank ">
+										<i class="fa fa-twitter-square "></i>关注 @GamepochSH
+									</a>
+								</li>
+								<li class="contact-list-title">
+									<a href="https://www.facebook.com/profile.php?id=100011243130897 " rel="noopener "
+										data-toggle="tooltip " data-placement="right" title="Follow Gamepoch on Facebook " target="_blank ">
+										<i class="fa fa-facebook-official"></i>关注 @GamepochSH
+									</a>
+								</li>
 
-                <li class="
+								<li class="
                     contact-list-title">
-                  <a href="https://www.instagram.com/gamepoch_cn/" rel="noopener" data-toggle=" tooltip" data-placement="right "
-                    title="Follow Gamepoch on Instagram" target="_blank ">
-                    <i class="fa fa-instagram "></i>关注 @gamepoch_cn
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="footer-bottom ">
-    <div class="container ">
-      <div class="row ">
-        <div class="col-sm-12 text-center">
-          <div class="text-center">
-            星游纪版权所有 |
-            <a href="/guardian.html">家长监护</a>
-          </div>
-          <div class="text-center">本游戏适合6周岁或以上用户，为了您的健康，请合理安排游戏时间。</div>
-          <div class="text-center">上海星游纪信息技术有限公司</div>
-          <div class="text-center">沪ICP证 沪B2-20160111 | 沪网文（2016）0033-033号 | 沪ICP备 15039130号</div>
-          <div class="text-center">
-            办公地址：上海市普陀区真北路958号天地科技广场1号楼1202室
-          </div>
-          <div class="text-center">
-            客服电话：021-60934278
-          </div>
+									<a href="https://www.instagram.com/gamepoch_cn/" rel="noopener" data-toggle=" tooltip"
+										data-placement="right " title="Follow Gamepoch on Instagram" target="_blank ">
+										<i class="fa fa-instagram "></i>关注 @gamepoch_cn
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="footer-bottom ">
+		<div class="container ">
+			<div class="row ">
+				<div class="col-sm-12 text-center">
+					<div class="text-center">
+						星游纪版权所有 |
+						<a href="/guardian.html">家长监护</a>
+					</div>
+					<div class="text-center">本游戏适合6周岁或以上用户，为了您的健康，请合理安排游戏时间。</div>
+					<div class="text-center">上海星游纪信息技术有限公司</div>
+					<div class="text-center ">沪ICP证 沪B2-20160111 | 沪网文（2016）0033-033号 | <a target="_blank"
+							href="http://www.miitbeian.gov.cn">沪ICP备15039130号</a></div>
+					<div class="text-center">
+						办公地址：上海市普陀区真北路958号天地科技广场1号楼1202室
+					</div>
+					<div class="text-center">
+						客服电话：021-60934278
+					</div>
 
-          <div class="text-center">
-            <a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702004061"
-              style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-              <img class="lazyload" src="img/police.png" style="float:left;" alt="公安网备" />
-              <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">沪公网安备
+					<div class="text-center">
+						<a target="_blank" rel="noopener"
+							href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702004061"
+							style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+							<img class="lazyload" src="img/police.png" style="float:left;" alt="公安网备" />
+							<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">沪公网安备
 								31010702004061号</p>
-            </a>
-          </div>
-          <div class="text-center">
-            <a target="_blank" rel="noopener" href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/4028c08c533bd6170153828da31b715e">
-              <img class="lazyload" src="img/culture.jpg" alt="文网文" style="width: 3.5rem; margin: 0.8rem;">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog">
-      <img class="lazyload" data-src="img/qrcode.jpg" alt="微信二维码">
-    </div>
-  </div>
-  <!-- End Footer Bottom -->
+						</a>
+					</div>
+					<div class="text-center">
+						<a target="_blank" rel="noopener"
+							href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/4028c08c533bd6170153828da31b715e">
+							<img class="lazyload" src="img/culture.jpg" alt="文网文" style="width: 3.5rem; margin: 0.8rem;">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog">
+			<img class="lazyload" data-src="img/qrcode.jpg" alt="微信二维码">
+		</div>
+	</div>
+	<!-- End Footer Bottom -->
 </body>
 
 </html>
